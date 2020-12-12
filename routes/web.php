@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('home', [BasicControllers::class, 'home'])->name('home');
+Route::get('/about', [BasicControllers::class, 'about'])->name('about');
+Route::get('articles', [BasicControllers::class, 'articles'])->name('articles');
