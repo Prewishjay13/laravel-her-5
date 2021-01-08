@@ -13,9 +13,9 @@ use App\Http\Controllers\BaseController;
 |
 */
 
-Route::get('/about', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home', [BaseController::class, 'home'])->name('home');
 Route::get('/about', [BaseController::class, 'about'])->name('about');
-Route::get('/articles', [BaseController::class, 'articles'])->name('articles');
+//Route::get('/articles', [BaseController::class, 'articles'])->name('articles');
