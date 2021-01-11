@@ -15,4 +15,9 @@ class BaseController extends Controller
         $title = 'This is the About page';
         return view('pages.about')-> with('title', $title);
     }
+
+    public function Create_post(){
+        $title = 'This is the create post page';
+        return view('pages.create_post')-> with('title', $title);
+    }
 }

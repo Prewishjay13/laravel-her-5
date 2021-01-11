@@ -18,4 +18,5 @@ Route::get('/', function () {
 });
 Route::get('/home', [BaseController::class, 'home'])->name('home');
 Route::get('/about', [BaseController::class, 'about'])->name('about');
+Route::get('/create_post', [BaseController::class, 'create_post'])->name('create_post');
 //Route::get('/articles', [BaseController::class, 'articles'])->name('articles');
