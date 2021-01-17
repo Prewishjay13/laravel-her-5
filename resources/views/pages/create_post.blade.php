@@ -6,7 +6,7 @@
     <h1>{{$title}}</h1>
 
 <div class="container">
-    <form method="post" action={{route()}}>
+    <form method="post" action={{route('store_post')}}>
         @csrf
 
         //title

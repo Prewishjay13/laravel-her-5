@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BaseController;
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,5 +19,10 @@ Route::get('/', function () {
 });
 Route::get('/home', [BaseController::class, 'home'])->name('home');
 Route::get('/about', [BaseController::class, 'about'])->name('about');
-Route::get('/create_post', [BaseController::class, 'create_post'])->name('create_post');
-//Route::get('/articles', [BaseController::class, 'articles'])->name('articles');
+Route::get('/posts', [PostController::class, 'index'])->name('view_post');
+Route::get('/create_post_page', [BaseController::class, 'create_post'])->name('create_post_page');
+Route::get('/create_post', [PostController::class, 'create'])->name('create_post'); //->middelware('auth');
+Route::post('/store_post', [PostController::class, 'store'])->name('store_post');
+Route::get('/post/{id}', [PostController::class, 'show'])->name('show_post');
+
+

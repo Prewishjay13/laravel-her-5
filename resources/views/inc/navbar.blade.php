@@ -4,7 +4,7 @@
         <ul class="navbar-nav mr-auto">
             <a href="{{route('home')}}">Home</a>
             <a href="{{route('about')}}">About</a>
-            <a href="{{route('create_post')}}">New Post</a>
+            <a href="{{route('create_post_page')}}">New Post</a>
 
         </ul>
         <form class="form-inline my-2 my-lg-0">
