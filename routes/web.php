@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BaseController;
 use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +14,7 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,5 +25,6 @@ Route::get('/create_post_page', [BaseController::class, 'create_post'])->name('c
 Route::get('/create_post', [PostController::class, 'create'])->name('create_post'); //->middelware('auth');
 Route::post('/store_post', [PostController::class, 'store'])->name('store_post');
 Route::get('/post/{id}', [PostController::class, 'show'])->name('show_post');
+
 
 
